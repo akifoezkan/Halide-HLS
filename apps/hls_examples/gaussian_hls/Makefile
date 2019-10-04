@@ -57,3 +57,4 @@ clean:
 	rm -f pipeline_zynq.h pipeline_zynq.c pipeline_zynq.o
 	rm -f run_zynq.o
 	rm -f hls_target.h hls_target.cpp
+	rm -r -f hls_prj
