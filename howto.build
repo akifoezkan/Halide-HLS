@@ -1,0 +1,16 @@
+Here are the original tutorials:
+1. install llvm and clang 3.7
+  * ubuntu-14
+    https://github.com/jingpu/Halide-HLS/wiki/Building-Halide
+  * build from source
+    https://github.com/jingpu/Halide-HLS/blob/HLS/README.orig.md
+
+2. set environment variables (source init_llvm37.sh) 
+  export LLVM_CONFIG=${LLVM_INSTALL_DIR}/bin/llvm-config
+  export CLANG=${LLVM_INSTALL_DIR}/bin/clang
+
+3. go to halide-hls directory and
+  make -j
+
+4. go to hls examples folder and enjoy
+  cd Halide-HLS/apps/hls_examples/
