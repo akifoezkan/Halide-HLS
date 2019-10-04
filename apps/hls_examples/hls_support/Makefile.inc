@@ -10,6 +10,12 @@
 #HLS_IFLAG += -I ${AUTOPILOT_TOOL}/auto_cc/include
 
 HLS_IFLAG += -I ../hls_support
+
+# fetch vivado address instead of the local headers constrained to a specific version
+VIVADO_HLS_IPATH=$$(vivado_hls -r)/include
+HLS_IFLAG += -I ${VIVADO_HLS_IPATH}
+
+# fall back to absolute path if vivado_hls is not in the path
 HLS_IFLAG += -I ../hls_support/xilinx_hls_lib_2015_4
 
 HLS_CXXFLAGS = $(HLS_IFLAG) -DC_TEST
