@@ -1,0 +1,17 @@
+https://github.com/jingpu/Halide-HLS/wiki/Generating-Hardware-IP-(Verilog)
+
+* generating hardware accelerator design.
+  cd Halide-HLS/apps/hls_examples/[app_name]
+  make pipeline_hls.cpp
+
+* Running C simulation. The simulation verifies the functionality of HLS C design by checking the outputs with the Halide CPU implementation reference.
+  (It is better if vivado_hls is in the PATH)
+  make out.png
+
+* Run simulation and generated hardware (versin official: 2015.4, works untill 2018.1).
+  make run_hls
+
+* Just to synthesize hardware from the generated hls files:
+  RUN_PATH=/localdata/oezkan/projects/Halide-HLS-myfork/apps/hls_examples/gaussian_hls \
+  RUN_ARGS=/localdata/oezkan/projects/Halide-HLS-myfork/apps/images/gray.png \
+  vivado_hls -f ../hls_support/run_hls.tcl -l vivado_hls.log
